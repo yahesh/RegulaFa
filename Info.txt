@@ -1,0 +1,66 @@
+Besonderheiten der Syntax:
+
+Um einen Wert korrekt anzugeben, müssen sie in das oberste Edit-Feld den Exponenten von X angeben. In das Edit-Feld darunter geben sie den Wert an, mit dem X multipliziert werden soll. Mit der CheckBox darunter geben sie an, ob von X die Potenz oder die Wurzel gezogen werden soll.
+
+Um ein statisches Glied zur Funktion hinzuzufügen, müssen sie diese über die Exponente 0 machen, wobei "Wurzelziehen" deaktiviert sein muss.
+
+Sollten sie kompliziertere Wurzeln oder Potenzen mit ausrechnen wollen, müssen sie zur Zeit leider die Wurzeln/Potenzen in einfachere auflösen, so dass z.B. aus x * Wurzel((4 * x) + 4) die beiden Unterterme 2 * (x^3 / 2) + (2 * x) werden. diese wiederum können, wie oben beschrieben, einfach eingegeben werden.
+
+<\\----------//>
+
+Ein Funktionsbeispiel hier sei hier im Buch:
+  Mathematik 11
+  Einführungsphase
+  
+  von Cornelsen (Bigalke / Köhler)
+
+  auf Seite 83 die Nummer 7 - i
+
+<\\----------//>
+
+diese lautet:
+
+  (x^2 - 6) * (x^3 + (7 * x^2) - x + 9) = 0
+
+ausmultipliziert hat sie die Form:                                                
+
+  x^5  + (7 * x^4)  - (7 * x^3)  - (33 * x^2)  + (6 * x) - 54 = 0
+
+so kann sie leicht in das Programm übernommen werden:
+
+  1 * X^5
+  7 * X^4
+ -7 * X^3
+-33 * X^2 
+  6 * X^1
+-54 * X^0
+
+Aus der Ausgangsformel kann man schon die erste Nullstelle ablesen:
+
+  x1 = Wurzel(6) = 2,4494897427831780981972840747059
+
+da, wenn x^2 6 ergibt, die erste Klammer 0 wird, und somit der gesamte Funktionswert.
+
+Testen kann man dies, indem man für den Wert A=2 und für den Wert B=3 eingibt und auf "Berechne die Regula-Falsi" klickt. Nun sollte der Wert im Feld unter dem Button angegeben werden.
+
+Als nächstes sollte man das gespiegelte Intervall untersuchen, also A=-2 B=-3 (oder A=-3 und B=-2 -> der Tolleranzwert
+ändert sich zwar, das Intolleranzwert bleibt allerdings konstant, da nur auf 3 Stellen hinter dem Komma genau gerechnet
+wird). Auch hier wird eine Nullstelle mit dem X-Wert
+
+  x2 = -2,44948936611196 (A=-3; B=-2)
+
+oder
+
+  x2 = -2,44948457554447 (A=-2; B=-3)
+
+gefunden.
+
+Durch weiteres Probieren, kommt man auf das dritte Intervall von [A = -8; B = -7] und somit auf
+
+  x3 = -7,30551488624068
+
+oder
+
+  x3 = -7,30551501517431 (wenn A = -7 und B = -8)
+
+wenn man sich den Graphen der Funktion schon einmal angesehen hat, weiß man, dass er nur 3 Nullstellen besitzt. Dadurch haben wir nun also alle Nullstellen herausgefunden.
